@@ -4,7 +4,12 @@ const LeftSideCmp = () => <h2 style={{ backgroundColor: "red" }}>Left</h2>;
 const RightSideCmp = () => <h2 style={{ backgroundColor: "blue" }}>Right</h2>;
 
 function App() {
-  return <SplitScreen Left={LeftSideCmp} Right={RightSideCmp} />;
+  return (
+    <SplitScreen lefWidth={1} rightWidth={2}>
+      <LeftSideCmp />
+      <RightSideCmp />
+    </SplitScreen>
+  );
 }
 
 export default App;
